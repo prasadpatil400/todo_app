@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+
+{% block body %}
+<div class="container my-3">
+    <form action ="/update/{{todo.sno}}" method="POST">
+      <div class="mb-3">
+        <label for="text" class="form-label">ITEAM</label>
+        <input type="text" class="form-control" id="text" value="{{todo.iteam}}" name='iteam' aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Desciption</label>
+        <input type="text" class="form-control" name="desc" value="{{todo.desc}}" id="desc">
+      </div>
+      <button type="submit" class="btn btn-outline-success">Submit</button>
+    </form>
+</div>
+{% endblock body %}
